@@ -15,10 +15,10 @@ function App() {
   const fetchData = async () => {
     try {
       let ip = inputIp.current.value ? inputIp.current.value : '32.115.105.0'
-      // at_LJRNbaX3nQwN124gwI8sdc11DCVvV
 
-      const response2 = await axios.get('http://ip-api.com/json/122.172.84.108')
+      const response2 = await axios.get('https://freeipapi.com/api/json/122.172.84.108')
       const response2Data = response2.data
+
       console.log(response2Data)
       const response = await axios.get(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_LJRNbaX3nQwN124gwI8sdc11DCVvV=${ip}`);
       
