@@ -20,11 +20,11 @@ function App() {
       const response2Data = response2.data
 
       console.log(response2Data)
-      const response = await axios.get(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_LJRNbaX3nQwN124gwI8sdc11DCVvV=${ip}`);
+      // const response = await axios.get(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_LJRNbaX3nQwN124gwI8sdc11DCVvV=${ip}`);
       
-      const responseData = await response.data
-      setData(responseData)
-      console.log(responseData)
+      // const responseData = await response.data
+      // setData(responseData)
+      // console.log(responseData)
     } catch (e){
       console.log(e)
     }
