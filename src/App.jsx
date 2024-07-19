@@ -18,6 +18,13 @@ const UpdateMapCenter = ({ position }) => {
 
 function App() {
 
+  const customIcon = new L.Icon({
+    iconUrl: 'images/icon-location.svg',
+    iconSize: [38, 45], // size of the icon
+    iconAnchor: [19, 38], // point of the icon which will correspond to marker's location
+    popupAnchor: [0, -38] // point from which the popup should open relative to the iconAnchor
+  });
+
   const [data, setData] = useState()
   const [loading,setLoading] = useState(false)
   const inputIp = useRef()
@@ -85,7 +92,7 @@ function App() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <UpdateMapCenter position={data?[data.latitude, data.longitude]:[40.71427,-74.00597]} />
-          <Marker  position={data?[data.latitude, data.longitude]:[40.71427,-74.00597]}>
+          <Marker icon={customIcon}  position={data?[data.latitude, data.longitude]:[40.71427,-74.00597]}>
             <Popup>
               {`${data ? `${data.regionName}, ${data.countryCode} ,${data.zipCode}` : <RiLoaderLine  className='animate-spin'/>}`}
             </Popup>
