@@ -16,7 +16,7 @@ function App() {
     try {
       let ip = inputIp.current.value ? inputIp.current.value : '32.115.105.0'
 
-      const response2 = await axios.get('https://freeipapi.com/api/json/122.172.84.108')
+      const response2 = await axios.get('https://freeipapi.com/api/json/100.255.255.255')
       const response2Data = response2.data
 
       console.log(response2Data)
